@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "432009370540",
+    "firebase_url": "https://nativescript-tutorial-c2f57.firebaseio.com",
+    "project_id": "nativescript-tutorial-c2f57",
+    "storage_bucket": "nativescript-tutorial-c2f57.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432009370540:android:992c6876673976a8",
+        "android_client_info": {
+          "package_name": "org.nativescript.nativescripttutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432009370540-oqnppp4qh67k8hs6r6pvp90ahh730tq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-ykm0E8DVj_z60LfvNH1OQNuOENBfjrU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
