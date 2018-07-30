@@ -10,8 +10,8 @@ module.exports = {
     },
     template: `
       <Page class="page" loaded="pageLoaded" actionBarHidden="true">
-          <FlexboxLayout class="signin">
-            <StackLayout class="form">
+          <FlexboxLayout class="wrapper signin">
+            <StackLayout class="container form">
                 <StackLayout class="input-field">
                 <TextField class="input" hint="Email" keyboardType="email" autocorrect="false"  returnKeyType="next" v-model="email"></TextField>
                 <StackLayout class="hr-light"></StackLayout>

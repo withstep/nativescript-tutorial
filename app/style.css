@@ -1,43 +1,53 @@
-TextField {
-    width: 100%;
-}
-.signin {
+.wrapper {
     align-items: center;
     flex-direction: column;
 }
-.signin .form {
+.container {
     margin-left: 30;
     margin-right: 30;
     flex-grow: 2;
     vertical-align: middle;
 }
 
-Label#nowMonth {
+TextField {
+    width: 100%;
+}
+
+Label#thisMonth {
     font-size: 35;
     text-align: center;
     vertical-align: middle;
-    padding-top: 25px;
     font-weight: bold;
+    padding: 5 0;
 }
 
 .week {
-    margin: 0 20;
-    background-color: #000000;
+    margin-top: 10;
+    background-color: #3a3a3a;
 }
 .week Label {
     text-align: center;
     vertical-align: middle;
     color: #ffffff;
     margin: 0;
-    padding: 5 0;
+    padding: 10 0;
 }
 
 .clock {
-    margin: 0 20;
+    margin-top: 20;
+}
+.clock > StackLayout {
+    background-color: #f7f7f7;
+    border-width:1;
+    border-color: #ccc;
+
 }
 .clock Label {
-    text-align: center;
     vertical-align: middle;
-    margin: 0;
-    padding: 5 0;
+    text-align: center;
+}
+
+.clock .hour > StackLayout {
+    border-width:1;
+    border-color: #ccc;
 }
