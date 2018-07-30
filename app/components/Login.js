@@ -73,7 +73,6 @@ module.exports = {
               okButtonText: '확인'
             });
           });
-
       },
       account: function() {
         this.$router.push('/account');

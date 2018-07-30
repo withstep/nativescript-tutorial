@@ -4,5 +4,5 @@ const router = require('./router');
 Vue.config.silent = false;
 
 new Vue({
-  router,
+  router
 }).$start();
