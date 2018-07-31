@@ -63,7 +63,6 @@ module.exports = {
           })
           .then(result => { 
             var data = JSON.stringify(result); 
-            console.log(data);
             this.$router.push('/home');
           })
           .catch(error => {
