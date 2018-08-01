@@ -111,47 +111,49 @@ module.exports = {
             <StackLayout v-for="(value, index) in week" :key="index" row="1" v-bind:col="index" @tap="onWeekTap(value.date)" class="weekday" v-bind:class="{ active : value.date === date }"><Label>{{ value.day }}</Label></StackLayout>
           </GridLayout> 
 
-          <GridLayout class="clock" columns="*,*,*,*" rows="50,50,50,50">
+          <GridLayout class="clock" columns="*,*,*,*" rows="60,60,60,60">
             
-            <StackLayout row="0" col="0" @tap="setMinute('50')" v-bind:class="{ active : minute === '50' }"><Label>50</Label></StackLayout>
-            <StackLayout row="0" col="1" @tap="setMinute('55')" v-bind:class="{ active : minute === '55' }"><Label>55</Label></StackLayout>
-            <StackLayout row="0" col="2" @tap="setMinute('00')" v-bind:class="{ active : minute === '00' }"><Label>0</Label></StackLayout>
-            <StackLayout row="0" col="3" @tap="setMinute('05')" v-bind:class="{ active : minute === '05' }"><Label>5</Label></StackLayout>
+            <StackLayout row="0" col="0" @tap="setMinute('50')" v-bind:class="{ active : minute === '50' }" verticalAlignment="center"><Label>50</Label></StackLayout>
+            <StackLayout row="0" col="1" @tap="setMinute('55')" v-bind:class="{ active : minute === '55' }" verticalAlignment="center"><Label>55</Label></StackLayout>
+            <StackLayout row="0" col="2" @tap="setMinute('00')" v-bind:class="{ active : minute === '00' }" verticalAlignment="center"><Label>0</Label></StackLayout>
+            <StackLayout row="0" col="3" @tap="setMinute('05')" v-bind:class="{ active : minute === '05' }" verticalAlignment="center"><Label>5</Label></StackLayout>
             
-            <StackLayout row="1" col="0" @tap="setMinute('45')" v-bind:class="{ active : minute === '45' }"><Label>45</Label></StackLayout>
-            <StackLayout row="1" col="1" colSpan="2" rowSpan="2">
+            <StackLayout row="1" col="0" @tap="setMinute('45')" v-bind:class="{ active : minute === '45' }" verticalAlignment="center"><Label>45</Label></StackLayout>
+            <StackLayout class="hour" row="1" col="1" colSpan="2" rowSpan="2">
               
-              <GridLayout class="hour" columns="*,*,*,*" rows="*,*,*,*">
-                  <StackLayout row="0" col="0" @tap="setHour('10')" v-bind:class="{ active : hour === '10' }"><Label>10</Label></StackLayout>
-                  <StackLayout row="0" col="1" @tap="setHour('11')" v-bind:class="{ active : hour === '11' }"><Label>11</Label></StackLayout>
-                  <StackLayout row="0" col="2" @tap="setHour('12')" v-bind:class="{ active : hour === '12' }"><Label>12</Label></StackLayout>
-                  <StackLayout row="0" col="3" @tap="setHour('01')" v-bind:class="{ active : hour === '01' }"><Label>1</Label></StackLayout>
+              <GridLayout columns="*,*,*,*" rows="*,*,*,*">
 
-                  <StackLayout row="1" col="0" @tap="setHour('09')" v-bind:class="{ active : hour === '09' }"><Label>9</Label></StackLayout>
-                  <StackLayout row="1" col="1" colSpan="2" rowSpan="2">
+                  <StackLayout row="0" col="0" @tap="setHour('10')" v-bind:class="{ active : hour === '10' }" verticalAlignment="center"><Label>10</Label></StackLayout>
+                  <StackLayout row="0" col="1" @tap="setHour('11')" v-bind:class="{ active : hour === '11' }" verticalAlignment="center"><Label>11</Label></StackLayout>
+                  <StackLayout row="0" col="2" @tap="setHour('12')" v-bind:class="{ active : hour === '12' }" verticalAlignment="center"><Label>12</Label></StackLayout>
+                  <StackLayout row="0" col="3" @tap="setHour('01')" v-bind:class="{ active : hour === '01' }" verticalAlignment="center"><Label>1</Label></StackLayout>
+
+                  <StackLayout row="1" col="0" @tap="setHour('09')" v-bind:class="{ active : hour === '09' }" verticalAlignment="center"><Label>9</Label></StackLayout>
+                  <StackLayout row="1" col="1" colSpan="2" rowSpan="2" verticalAlignment="center">
                     <Button height="100%" class="btn btn-primary" @tap="onSubmit">예약신청</Button>
                   </StackLayout>
-                  <StackLayout row="1" col="3" @tap="setHour('02')" v-bind:class="{ active : hour === '02' }"><Label>2</Label></StackLayout>
+                  <StackLayout row="1" col="3" @tap="setHour('02')" v-bind:class="{ active : hour === '02' }" verticalAlignment="center"><Label>2</Label></StackLayout>
 
-                  <StackLayout row="2" col="0" @tap="setHour('08')" v-bind:class="{ active : hour === '08' }"><Label>8</Label></StackLayout>
-                  <StackLayout row="2" col="3" @tap="setHour('03')" v-bind:class="{ active : hour === '03' }"><Label>3</Label></StackLayout>
+                  <StackLayout row="2" col="0" @tap="setHour('08')" v-bind:class="{ active : hour === '08' }" verticalAlignment="center"><Label>8</Label></StackLayout>
+                  <StackLayout row="2" col="3" @tap="setHour('03')" v-bind:class="{ active : hour === '03' }" verticalAlignment="center"><Label>3</Label></StackLayout>
 
-                  <StackLayout row="3" col="0" @tap="setHour('07')" v-bind:class="{ active : hour === '07' }"><Label>7</Label></StackLayout>
-                  <StackLayout row="3" col="1" @tap="setHour('06')" v-bind:class="{ active : hour === '06' }"><Label>6</Label></StackLayout>
-                  <StackLayout row="3" col="2" @tap="setHour('05')" v-bind:class="{ active : hour === '05' }"><Label>5</Label></StackLayout>
-                  <StackLayout row="3" col="3" @tap="setHour('04')" v-bind:class="{ active : hour === '04' }"><Label>4</Label></StackLayout>
+                  <StackLayout row="3" col="0" @tap="setHour('07')" v-bind:class="{ active : hour === '07' }" verticalAlignment="center"><Label>7</Label></StackLayout>
+                  <StackLayout row="3" col="1" @tap="setHour('06')" v-bind:class="{ active : hour === '06' }" verticalAlignment="center"><Label>6</Label></StackLayout>
+                  <StackLayout row="3" col="2" @tap="setHour('05')" v-bind:class="{ active : hour === '05' }" verticalAlignment="center"><Label>5</Label></StackLayout>
+                  <StackLayout row="3" col="3" @tap="setHour('04')" v-bind:class="{ active : hour === '04' }" verticalAlignment="center"><Label>4</Label></StackLayout>
+
               </GridLayout>
 
             </StackLayout>
-            <StackLayout row="1" col="3" @tap="setMinute('10')" v-bind:class="{ active : minute === '10' }"><Label>10</Label></StackLayout>
+            <StackLayout row="1" col="3" @tap="setMinute('10')" v-bind:class="{ active : minute === '10' }" verticalAlignment="center"><Label>10</Label></StackLayout>
 
-            <StackLayout row="2" col="0" @tap="setMinute('40')" v-bind:class="{ active : minute === '40' }"><Label>40</Label></StackLayout>
-            <StackLayout row="2" col="3" @tap="setMinute('15')" v-bind:class="{ active : minute === '15' }"><Label>15</Label></StackLayout>
+            <StackLayout row="2" col="0" @tap="setMinute('40')" v-bind:class="{ active : minute === '40' }" verticalAlignment="center"><Label>40</Label></StackLayout>
+            <StackLayout row="2" col="3" @tap="setMinute('15')" v-bind:class="{ active : minute === '15' }" verticalAlignment="center"><Label>15</Label></StackLayout>
 
-            <StackLayout row="3" col="0" @tap="setMinute('35')" v-bind:class="{ active : minute === '35' }"><Label>35</Label></StackLayout>
-            <StackLayout row="3" col="1" @tap="setMinute('30')" v-bind:class="{ active : minute === '30' }"><Label>30</Label></StackLayout>
-            <StackLayout row="3" col="2" @tap="setMinute('25')" v-bind:class="{ active : minute === '25' }"><Label>25</Label></StackLayout>
-            <StackLayout row="3" col="3" @tap="setMinute('20')" v-bind:class="{ active : minute === '20' }"><Label>20</Label></StackLayout>
+            <StackLayout row="3" col="0" @tap="setMinute('35')" v-bind:class="{ active : minute === '35' }" verticalAlignment="center"><Label>35</Label></StackLayout>
+            <StackLayout row="3" col="1" @tap="setMinute('30')" v-bind:class="{ active : minute === '30' }" verticalAlignment="center"><Label>30</Label></StackLayout>
+            <StackLayout row="3" col="2" @tap="setMinute('25')" v-bind:class="{ active : minute === '25' }" verticalAlignment="center"><Label>25</Label></StackLayout>
+            <StackLayout row="3" col="3" @tap="setMinute('20')" v-bind:class="{ active : minute === '20' }" verticalAlignment="center"><Label>20</Label></StackLayout>
           </GridLayout>
         </StackLayout>
         <StackLayout height="80">

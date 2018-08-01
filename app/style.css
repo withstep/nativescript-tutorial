@@ -61,10 +61,9 @@ Label#thisYear {
     background-color: #f7f7f7;
     border-width: 1;
     border-color: #ccc;
+    height: 100%;
 }
-.clock > StackLayout > Label {
-    line-height: 50;
-}
+
 .clock > .active {
     background-color: #00aeef;
     color: #ffffff;
@@ -76,14 +75,17 @@ Label#thisYear {
 }
 
 .clock Label {
-    vertical-align: middle;
+    vertical-align: center;
     text-align: center;
-    line-height: 40;
 }
 
-.clock .hour > StackLayout {
+.clock .hour {
+    height: auto;
+}
+.clock .hour StackLayout {
     border-width:1;
     border-color: #ccc;
+    height: 100%;
 }
 
 .clock Button {
