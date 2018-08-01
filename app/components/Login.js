@@ -1,11 +1,38 @@
 const firebase = require('nativescript-plugin-firebase');
 const dialogs = require('ui/dialogs');
+const LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
+
+const loader = new LoadingIndicator();
+ 
+// optional options
+// android and ios have some platform specific options
+var options = {
+  message: 'Loading...',
+  progress: 0.65,
+  android: {
+    indeterminate: true,
+    cancelable: false,
+    max: 100,
+    progressNumberFormat: "%1d/%2d",
+    progressPercentFormat: 0.53,
+    progressStyle: 1,
+    secondaryProgress: 1
+  },
+  ios: {
+    details: "Additional detail note!",
+    square: false,
+    margin: 10,
+    dimBackground: true,
+    color: "#4B9ED6",
+  }
+};
+
 
 module.exports = {
     data() {
       return {
-        email: 'dingdong2310@gmail.com',
-        password: 'eldehd@1026',
+        email: '',
+        password: '',
       };
     },
     template: `
@@ -53,6 +80,8 @@ module.exports = {
           });
         }
 
+        loader.show(options); // options is optional
+
         firebase.login(
           {
             type: firebase.LoginType.PASSWORD,
@@ -63,9 +92,13 @@ module.exports = {
           })
           .then(result => { 
             var data = JSON.stringify(result); 
+
+            loader.hide();
+
             this.$router.push('/home');
           })
           .catch(error => {
+            loader.hide();
             dialogs.alert({
               title: '로그인 오류',
               messge: error,

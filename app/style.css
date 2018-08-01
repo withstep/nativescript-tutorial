@@ -18,12 +18,19 @@ Label#thisMonth {
     text-align: center;
     vertical-align: middle;
     font-weight: bold;
-    padding: 5 0;
+    padding: 0;
+    margin: 0;
+}
+Label#thisYear {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
 }
 
 .week {
     margin-top: 10;
-    background-color: #3a3a3a;
+    background-color: #404041;
 }
 .week Label {
     text-align: center;
@@ -36,7 +43,7 @@ Label#thisMonth {
     color: #ffffff;
 }
 .week > StackLayout > Label {
-    color: #999999;
+    color: #6d6e71;
 }
 .week .active Label {
     color: #ffffff;
@@ -55,19 +62,25 @@ Label#thisMonth {
     border-width: 1;
     border-color: #ccc;
 }
-.clock .active {
-    background-color: #6262ff;
+.clock > StackLayout > Label {
+    line-height: 50;
+}
+.clock > .active {
+    background-color: #00aeef;
     color: #ffffff;
 }
+
+.clock > StackLayout > GridLayout > .active {
+    background-color: #283891;
+    color: #ffffff;
+}
+
 .clock Label {
     vertical-align: middle;
     text-align: center;
     line-height: 40;
 }
 
-.clock .hour {
-    border-radius: 10;
-}
 .clock .hour > StackLayout {
     border-width:1;
     border-color: #ccc;
